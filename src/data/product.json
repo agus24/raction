@@ -1,0 +1,16 @@
+{
+    "products" :[
+        {
+            "productId" : 1,
+            "name" : "Tyre Sealant",
+            "image" : "/products/tyresealant.jpg",
+            "image2" : "/products/tyresealant-bw.jpg"
+        },
+        {
+            "productId" : 2,
+            "name" : "Tyre Sealant2",
+            "image" : "/products/tyresealant.jpg",
+            "image2" : "/products/tyresealant-bw.jpg"
+        }
+    ]
+}

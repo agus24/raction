@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="site-wrapper boxed-layout">
+        <Header logo="./img/logo.png"/>
+        <router-view/>
+        <Footer />
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+
+export default {
+    name: "App",
+    components: {
+        Header,
+        Footer
+    }
+}
+</script>
 
 <style>
 #app {
@@ -17,4 +30,17 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.btn-brand {
+    background-color: #2fb23b !important;
+    border-color: #2fb23b !important;
+}
+
+/* ::selection {
+  background: #2fb23b;
+}
+
+::-moz-selection {
+  background: #2fb23b;
+} */
 </style>
