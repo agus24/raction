@@ -23,5 +23,5 @@ mix.styles([
     "src/assets/css/slick.min.css",
     "src/assets/css/slicknav.min.css",
     "src/assets/css/style.css",
-    "src/assets/css/style.min.css"
+    // "src/assets/css/style.min.css"
 ], "public/css/app.css");

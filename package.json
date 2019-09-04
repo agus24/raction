@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "mix-dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "mix-watch": "npm run mix-dev -- --watch",
     "mix-prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "lodash": "^4.17.15",
     "sass-loader": "^7.3.1",
     "vue": "^2.6.10",
+    "vue-parallaxy": "^1.1.1",
     "vue-router": "^3.0.3",
     "vue-slick": "^1.1.15"
   },

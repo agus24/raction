@@ -47,5 +47,17 @@ export default new Router({
       component: () => import( './views/Gallery.vue')
     }
     ],
-    mode: 'history'
+    mode: 'history',
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            const element = document.getElementById(to.hash.slice(1));
+            if (element) {
+                return window.scrollTo({
+                    top: element.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        return window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 })

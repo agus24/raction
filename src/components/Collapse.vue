@@ -1,11 +1,11 @@
 <template>
     <div>
         <div class="card">
-        <div class="card-header" @click="show = !show">
+        <div :class="headerClass" @click="show = !show">
             <h5 class="card-title">{{ question }}</h5>
         </div>
         <div class="card-body" v-show="show">
-            <div>
+            <div class="black-text">
                 <slot> </slot>
             </div>
         </div>
@@ -20,16 +20,27 @@
 <script>
     export default {
         name : "Collapse",
-        props : ["question"],
+        props : ["question", "even"],
         data: function() {
             return {
                 show : false
+            }
+        },
+        computed: {
+            headerClass() {
+                if(!this.even) {
+                    return "card-header";
+                }
+                return "card-header colored"
             }
         }
     }
 </script>
 
 <style scoped>
+    .colored {
+        background-color: #d4d4d4;
+    }
     .card-title {
         /* cursor: pointer; */
         color: black;

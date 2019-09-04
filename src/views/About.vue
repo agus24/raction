@@ -20,7 +20,7 @@
                     <div class="col-lg-6 order-1 order-md-0">
                         <div class="about-content">
                             <h2 class="h3 mb-sm-20">Tentang Kami</h2>
-                            <p class="justify">PT Karya Cipta Didirikan pada tahun 1990-an, mengawali usaha dengan membuat spare parts untuk sepeda motor dan sepeda. Melihat perkembangan sepeda motor di Indonesia yang setiap tahun nya semakin pesat, kami memutuskan untuk lebih fokus bergerak dibidang spare parts motor. Demi keselamatan dan keamanan dalam berkendara, di tahun 2018 kami mengeluarkan Reaction Tyre Sealant dengan teknologi USA agar para pengendara terhindar dari ranjau paku dan sampai tujuan dengan selamat.</p>
+                            <p class="justify">PT Karya Cipta Didirikan pada tahun 1990-an, mengawali usaha dengan membuat spare parts untuk sepeda motor dan sepeda. Melihat perkembangan sepeda motor di Indonesia yang setiap tahun nya semakin pesat, kami memutuskan untuk lebih fokus bergerak dibidang spare parts motor. Demi keselamatan dan keamanan dalam berkendara, di tahun 2018 kami mengeluarkan Raction Tyre Sealant dengan teknologi USA agar para pengendara terhindar dari ranjau paku dan sampai tujuan dengan selamat.</p>
                         </div>
                     </div>
 
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-sm-5 text-center text-sm-right">
-                    <a href="#" class="btn btn-black">Kontak Sekarang</a>
+                    <a href="#" class="btn btn-brand">Kontak Sekarang</a>
                 </div>
             </div>
         </div>
@@ -79,6 +79,13 @@
 <style>
     .align-right {
         text-align: right !important;
+    }
+
+    @media screen and (max-width: 766px){
+        .align-right {
+            text-align: left !important;
+            margin-bottom: 10px !important;
+        }
     }
 
     .justify {

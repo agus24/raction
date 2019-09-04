@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="site-wrapper boxed-layout">
-        <Header logo="./img/logo.png"/>
+    <div class="site-wrapper">
+        <Header/>
         <router-view/>
         <Footer />
     </div>
@@ -24,23 +24,66 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button{
+    color: white;
 }
 
 .btn-brand {
     background-color: #2fb23b !important;
     border-color: #2fb23b !important;
+    color: white;
 }
 
-/* ::selection {
-  background: #2fb23b;
+.btn-brand:hover {
+    box-shadow: 0 0 5px 7px #dcdcdc69;
+    color: white;
 }
 
-::-moz-selection {
-  background: #2fb23b;
-} */
+.justify {
+    text-align: justify;
+}
+
+.is-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 766px){
+    .is-desktop {
+        display: none;
+    }
+    .is-mobile {
+        display : block;
+    }
+}
+
+@media screen and (min-width: 766px){
+    .is-desktop {
+        display: block;
+    }
+    .is-mobile {
+        display : none;
+    }
+}
+</style>
+
+<style >
+    .slide-leave-active,
+    .slide-enter-active {
+        transition: 0.2s;
+    }
+    .slide-enter {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
+    .slide-leave-to {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
 </style>

@@ -25,17 +25,9 @@
                         <div class="action-bar-inner mb-30">
                             <div class="row align-items-center">
                                 <div class="col-sm-6">
+                                    <p>Product List</p>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="sort-by-wrapper">
-                                        <label for="sort" class="sr-only">Sort By</label>
-                                        <select name="sort" id="sort">
-                                            <option value="sbp">Sort By Popularity</option>
-                                            <option value="sbn">Sort By Newest</option>
-                                            <option value="sbt">Sort By Trending</option>
-                                            <option value="sbr">Sort By Rating</option>
-                                        </select>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -84,6 +76,8 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    ul li a {
+        color: white;
+    }
 </style>

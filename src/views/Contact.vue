@@ -24,7 +24,7 @@
                                         <i class="ion-ios-location-outline"></i>
                                     </div>
                                     <div class="con-info-txt">
-                                        <h4>Lokasi kAMI</h4>
+                                        <h4>Lokasi Kami</h4>
                                         <p>Jl. contoh nama jalan, kota, provinsi</p>
                                     </div>
                                 </div>

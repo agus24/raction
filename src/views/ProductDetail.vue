@@ -16,7 +16,7 @@
                                                 </figure>
                                             </div>
 
-                                            <a href="#thumb-gallery" class="btn-large-view btn-gallery-popup">View Larger <i class="fa fa-search-plus"></i></a>
+                                            <button class="btn-large-view btn-gallery-popup">View Larger <i class="fa fa-search-plus"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -67,6 +67,9 @@
                 product : {}
             }
         },
+        methods : {
+
+        },
         mounted() {
             let id = this.$route.params.id;
             Axios.get('http://raction.co.id/ractionadmin/api/product/'+id)
@@ -80,6 +83,8 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    .product-details-thumbnail {
+        border: 0;
+    }
 </style>

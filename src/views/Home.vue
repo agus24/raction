@@ -1,168 +1,85 @@
 <template>
   <div class="home">
-      <slick
-        ref="slick"
-        :options="slickOptions.banner">
-        <div class="slider-slide-item bg-img bg-1">
-            <div class="container container-wide h-100">
-            </div>
-        </div>
-        <div class="slider-slide-item bg-img bg-2">
-            <div class="container container-wide h-100">
-            </div>
-        </div>
-      </slick>
-      <div class="banner-area-wrapper banner-mt">
-        <div class="container container-wide">
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="banner-item">
-                        <div class="banner-item__img">
-                            <a href="#"><img src="/uploads/bottom1.png" alt="Banner" /></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="banner-item">
-                        <div class="banner-item__img">
-                            <a href="#"><img src="/uploads/bottom2.png" alt="Banner" /></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="banner-item">
-                        <div class="banner-item__img">
-                            <a href="#"><img src="/uploads/bottom3.png" alt="Banner" /></a>
-                        </div>
-                    </div>
+    <parallax :speed-factor="1" breakpoint="(min-width: 50px)" :fixed="true" :parallax="true">
+        <img src="/uploads/slider/banner.png" style="position:absolute">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-6">
+                <div class="header-content">
+                    <transition name="slide">
+                        <h5 v-if="showText">Every <span>Ride</span></h5>
+                    </transition>
+                    <transition name="slide-600ms">
+                        <h5 v-if="showText" class="push-right">Has A Story</h5>
+                    </transition>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="call-to-action-area sm-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h2 class="h3">Why Choose Our Products?</h2>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <div class="call-to-action-item mt-0">
-                        <div class="call-to-action-item__icon">
-                            <img src="/img/icons/icon-1.png" alt="fast delivery">
-                        </div>
-                        <div class="call-to-action-item__info">
-                            <h3>Kelebihan</h3>
-                            <p>Sahabat berkendara Anda agar terhindar dari ranjau paku. Bebas dan aman dalam berkendara.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-                    <div class="call-to-action-item">
-                        <div class="call-to-action-item__icon">
-                            <img src="/img/icons/icon-2.png" alt="quality">
-                        </div>
-                        <div class="call-to-action-item__info">
-                            <h3>Berkualitas</h3>
-                            <p>Memiliki kenyamanan dan keamanan tanpa harus menguras dompet.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-                    <div class="call-to-action-item">
-                        <div class="call-to-action-item__icon">
-                            <img src="/img/icons/icon-3.png" alt="return">
-                        </div>
-                        <div class="call-to-action-item__info">
-                            <h3>24/7 Bantuan</h3>
-                            <p>Raction memiliki pusat bantuan yang siap melayani Anda setiap saat.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="best-seller-products-area sm-top">
-        <div class="container container-wide">
-            <div class="row">
-                <div class="col-lg-5 m-auto text-center">
-                    <div class="section-title">
-                        <h2 class="h3">Best Products</h2>
-                        <p>All best seller product are now available for you and your can buy
-                            this product from here any time any where so sop now</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <Slick ref="slick" :options="slickOptions.product">
-                        <!-- Start Product Item -->
-                        <div class="product-item">
-                            <div class="product-item__thumb">
-                                <a href="#">
-                                    <img class="thumb-primary" src="/uploads/products/tyresealant-bw.jpg" alt="Product" />
-                                    <img class="thumb-secondary" src="/uploads/products/tyresealant.jpg" alt="Product" />
-                                </a>
-                            </div>
-
-                            <div class="product-item__content">
-                                <div class="ratting">
-                                    <span><i class="ion-android-star"></i></span>
-                                    <span><i class="ion-android-star"></i></span>
-                                    <span><i class="ion-android-star"></i></span>
-                                    <span><i class="ion-android-star"></i></span>
-                                    <span><i class="ion-android-star"></i></span>
-                                </div>
-                                <h4 class="title"><a href="single-product.html">Tyre Sealant</a></h4>
-                                <span class="price">
-                                    &nbsp;
-                                    <!-- <strong>Price:</strong> $65.00 -->
-                                </span>
-                            </div>
-
-                            <div class="product-item__action">
-                                <!-- <button class="btn-add-to-cart"><i class="ion-bag"></i></button>
-                                <button class="btn-add-to-cart"><i class="ion-ios-loop-strong"></i></button>
-                                <button class="btn-add-to-cart"><i class="ion-ios-heart-outline"></i></button>
-                                <button class="btn-add-to-cart"><i class="ion-eye"></i></button> -->
-                            </div>
-
-                            <!-- <div class="product-item__sale">
-                                <span class="sale-txt">35%</span>
-                            </div> -->
-                        </div>
-                        <!-- End Product Item -->
-                    </Slick>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="call-to-action-area">
-        <div class="call-to-action-content-area bg-img" data-bg="/img/bg/bg-1.jpg">
+    </parallax>
+    <div class="page-content-wrapper about-section">
+        <div class="about-page-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center">
-                        <div class="call-to-action-txt">
-                            <h2>ALL KINDS OF PARTS THAT YOU <br> NEED CAN FIND HERE</h2>
-                                <router-link to="findus" class="btn btn-brand">Find Us</router-link>
-                                <!-- <a href="shop.html" class="btn btn-brand">Shop Now</a> -->
+                    <div class="col-lg-6 order-1 order-md-0 col-xs-6">
+                        <div class="about-content">
+                            <h2 class="h3 mb-sm-20">About Us</h2>
+                            <p class="justify">PT Karya Cipta Didirikan pada tahun 1990-an, mengawali usaha dengan membuat spare parts untuk sepeda motor dan sepeda. Melihat perkembangan sepeda motor di Indonesia yang setiap tahun nya semakin pesat, kami memutuskan untuk lebih fokus bergerak dibidang spare parts motor. Demi keselamatan dan keamanan dalam berkendara, di tahun 2018 kami mengeluarkan Raction Tyre Sealant dengan teknologi USA agar para pengendara terhindar dari ranjau paku dan sampai tujuan dengan selamat.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-0 col-xs-6">
+                        <div class="about-thumb mb-sm-30">
+                            <slick ref="slick" :options="slickOptions">
+                                <img :src="value" alt="About" v-for="value in aboutSlide" v-bind:key="value" style="width:70%"/>
+                            </slick>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="call-to-action-image-area">
+    </div>
+    <div class="page-content-wrapper best-product-section" style="background-color:black;">
+        <div class="about-page-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center">
-                        <img src="/uploads/tyre_editted.png" alt="Car" />
+                    <div class="col-lg-12">
+                        <h2 class="h3 mb-sm-20">Best Product</h2>
+                        <p>All best Seller product are now available for you and you can buy this product from here any time where to stop now</p>
+                    </div>
+                    <div class="card col-lg-4">
+                        <img class="card-img-top" src="/uploads/products/tyreseal.png" alt="Card image cap">
+                        <div class="card-title">
+                            <h4>Product A</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-4">
+                        <img class="card-img-top" src="/uploads/products/tyreseal.png" alt="Card image cap">
+                        <div class="card-title">
+                            <h4>Product B</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-4">
+                        <img class="card-img-top" src="/uploads/products/tyreseal.png" alt="Card image cap">
+                        <div class="card-title">
+                            <h4>Product C</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">&nbsp;</div>
+                    <div class="col-lg-4 text-center product-more">
+                        <h5>
+                            All kind of parts that you need can find here
+                        </h5>
+                        <router-link class="btn btn-brand findus" to="findus">Find Us</router-link>
                     </div>
                 </div>
             </div>
@@ -172,45 +89,168 @@
 </template>
 
 <script>
+import '../../node_modules/slick-carousel/slick/slick.css'
 import Slick from 'vue-slick';
+import Parallax from 'vue-parallaxy'
+import Axios from "axios";
+
 export default {
   name: 'home',
   components: {
-    Slick
+    Slick,
+    Parallax
   },
   data: function() {
-return {
-      slickOptions: {
-          banner: {
-            slidesToShow: 1,
-            infinite: true,
+    return {
+        showText : false,
+        aboutSlide : [
+            "/uploads/about-slide/about_1.png",
+            "/uploads/about-slide/about_2.png",
+            "/uploads/about-slide/about_3.png",
+        ],
+        slickOptions : {
             arrows: false,
-            dots: false,
-            fade: true,
-            speed: 1000
-          },
-          product: {
-            slidesToShow: 3,
-            infinite: true,
-            arrows: false,
-            dots: false,
-            fade: false,
-            speed: 1000
-          }
+            autoplay: true,
+            autoplaySpeed: 2000,
         },
-  };
-}
+        products : []
+    };
+  },
+  methods : {
+      loadProduct() {
+        Axios.get("http://raction.co.id/ractionadmin/api/product")
+        .then(response => {
+            this.products = response.data;
+        })
+        .catch(error => {
+            console.log("error", error);
+        })
+      }
+  },
+  mounted() {
+      this.loadProduct();
+      setTimeout(() => {
+          this.showText = true;
+      }, 200);
+  }
 }
 </script>
 
 <style scoped>
-    .bg-1 {
-        background-image: url("/uploads/slider/banner1.jpg");
+    .slick-slide img {
+        width: 70% !important;
+    }
+    .product-more {
+        padding-top: 4%;
+    }
+    
+    .product-more h5{
+        color: white;
+        text-transform: uppercase;
     }
 
-    .bg-2 {
-        background-image: url('/uploads/slider/banner2.jpg');
+    .bg-1 {
+        background-image: url("/uploads/slider/banner.png");
     }
-</style>
-<style>
+
+    .card {
+        background-color: transparent;
+        margin-top: 20px;
+    }
+
+    .card-text {
+        text-align: justify !important;
+    }
+
+    .card-title h4 {
+        color: #2fb23b;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 0;
+        padding-top:20px;
+        margin-bottom: -10px;
+    }
+
+    .about-section {
+        background-color: #1b1b1c;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .best-product-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .best-product-section h2 {
+        color: #2fb23b;
+        text-align:center;
+    }
+
+    .best-product-section p {
+        text-align: center;
+        color: white;
+    }
+
+    .header-content h1, 
+    .header-content h2, 
+    .header-content h3, 
+    .header-content h4,
+    .header-content h5
+    {
+        font-size: 70px;
+        color: white;
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .header-content h5 span{
+        color: #2fb23b;
+    }
+
+    .header-content h5 {
+        padding-left: 10%;
+    }
+
+    .header-content .push-right {
+        padding-left: 20%;
+    }
+
+    .about-content .h3 {
+        text-align:left;
+        color: #2fb23b;
+    }
+
+    .about-content p {
+        color: white;
+    }
+
+    .Masthead {
+        height: 100vh !important;
+    }
+
+/* Transition Start */
+    .slide-leave-active,
+    .slide-enter-active {
+        transition: 1s;
+    }
+    .slide-enter {
+        transform: translate(-100%, 0);
+    }
+    .slide-leave-to {
+        transform: translate(100%, 0);
+    }
+    .slide-600ms-leave-active,
+    .slide-600ms-enter-active {
+        transition: 1.5s;
+    }
+    .slide-600ms-enter {
+        transform: translate(-100%, 0);
+    }
+    .slide-600ms-leave-to {
+        transform: translate(100%, 0);
+    }
+/* Transition End */
 </style>

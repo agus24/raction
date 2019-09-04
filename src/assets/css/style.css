@@ -30,6 +30,7 @@
    01. Typography CSS
 ===================================== */
 body {
+    background-color: black;
     color: #303030;
     font-size: 15px;
     font-family: "Poppins", sans-serif;
@@ -40,13 +41,13 @@ body {
 
 /* Remove text-shadow in selection highlight. */
 ::-moz-selection {
-    background: #eeb644;
+    background: #2fb23b;
     color: #FFFFFF;
     text-shadow: none;
 }
 
 ::selection {
-    background: #eeb644;
+    background: #2fb23b;
     color: #FFFFFF;
     text-shadow: none;
 }
@@ -133,10 +134,22 @@ h5,
 .h5,
 h6,
 .h6 {
-    color: #1b1b1c;
+    color: white;
     line-height: 1.2;
     font-family: "Oswald", sans-serif;
     font-weight: 700;
+}
+
+p {
+    color: white;
+}
+
+span {
+    color: white;
+}
+
+ul li {
+    color: white;
 }
 
 h1,
@@ -382,6 +395,10 @@ button:focus {
     border-color: #1b1b1c;
     border-radius: 25px;
     color: #FFFFFF;
+}
+
+.black-text h1, .black-text h2, .black-text h3, .black-text h4, .black-text h5, .black-text p, .black-text span {
+    color: black;
 }
 
 .btn-black:hover {
@@ -922,7 +939,13 @@ only screen and (min-width: 1200px) {
 04. Header Area Style CSS
 ==============================*/
 .header-area {
-    padding: 30px 0;
+    padding: 18px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* height: 40px; */
+    z-index: 999;
+    background-color: #0000009e;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -946,7 +969,7 @@ only screen and (min-width: 1200px) {
 }
 
 .header-area .nav li a {
-    color: #1b1b1c;
+    color: white;
     display: block;
     font-size: 15px;
     font-weight: 600;
@@ -2949,9 +2972,9 @@ only screen and (min-width: 1200px) {
 }
 
 .contact-info-item .con-info-icon {
-    border: 1px solid #eeb644;
+    border: 1px solid #2fb23b;
     border-radius: 100px;
-    color: #eeb644;
+    color: #2fb23b;
     font-size: 35px;
     margin: 0 auto 20px;
     -webkit-transition: 0.4s;
@@ -2968,7 +2991,7 @@ only screen and (min-width: 1200px) {
 }
 
 .contact-info-item:hover .con-info-icon {
-    background-color: #eeb644;
+    background-color: #2fb23b;
     color: #FFFFFF;
 }
 
@@ -3095,7 +3118,7 @@ only screen and (min-width: 1200px) {
 
 .pagination li:hover a,
 .pagination li.active a {
-    color: #000000;
+    color: #2fb23b;
 }
 
 .pagination--2 li a {

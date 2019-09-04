@@ -4,9 +4,9 @@
             <div class="about-page-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 align-left faq-holder">
+                        <div class="col-md-12 align-left faq-holder mt-20">
                             <h3>FAQ</h3>
-                            <Collapse v-for="(item, index) in faq" :key="index" :question="item.q">
+                            <Collapse v-for="(item, index) in faq" :key="index" :question="item.q" :even="index%2">
                                 <span class="align-left">{{item.a}}</span>
                             </Collapse>
                         </div>
@@ -44,5 +44,9 @@
 
     .faq-holder {
         margin-bottom: 25px;
+    }
+
+    .mt-20 {
+        margin-top: 20px;
     }
 </style>
