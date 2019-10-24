@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="con-info-txt">
                                         <h4>Lokasi Kami</h4>
-                                        <p>Jl. contoh nama jalan, kota, provinsi</p>
+                                        <p>Perumahan Taman duta mas blok A7 no.28 jakarta- Barat. 11460</p>
                                     </div>
                                 </div>
                             </div>
