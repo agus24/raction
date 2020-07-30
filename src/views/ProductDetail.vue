@@ -6,7 +6,6 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <!-- Start Product Thumbnail Area -->
                                 <div class="col-md-5">
                                     <div class="product-thumb-area">
                                         <div class="product-details-thumbnail">
@@ -20,34 +19,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End Product Thumbnail Area -->
-
-                                <!-- Start Product Info Area -->
                                 <div class="col-md-7">
                                     <div class="product-details-info-content-wrap">
                                         <div class="prod-details-info-content">
                                             <h2>{{ product.name }}</h2>
                                             <p v-html="product.description"></p>
-
-                                            <div class="product-meta">
-                                                <!-- <span class="sku_wrapper">SKU: <span class="sku">N/A</span></span> -->
-
-                                            <!-- <span class="posted_in">Categories:
-                                                <a href="#">Best Seller,</a>
-                                                <a href="#">Parts,</a>
-                                                <a href="#">Shop</a>
-                                            </span> -->
-
-                                            <!-- <span class="tagged_as">Tags:
-                                                <a href="#">Seller,</a>
-                                                <a href="#">Modern,</a>
-                                                <a href="#">Parts</a>
-                                            </span> -->
-                                            </div>
+                                            <div class="product-meta"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- End Product Info Area -->
                             </div>
                         </div>
                     </div>
@@ -76,8 +56,8 @@
             .then(response => {
                 this.product = response.data
             })
-            .catch(error => {
-                console.log(error)
+            .catch(error => { 
+                alert("Something went wrong.")
             })
         }
     }

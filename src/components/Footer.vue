@@ -10,10 +10,10 @@
                                 <h4>do not wait, <span>let's talk</span></h4>
                                 <div class="row pt-3">
                                     <div class="col-sm-12 col-lg-4">
-                                        <i class="fa fa-phone"></i> 0813-8243-9171
+                                        <a href="tel:+6281382439171"><i class="fa fa-phone"></i> 0813-8243-9171</a>
                                     </div>
                                     <div class="col-sm-12 col-lg-5">
-                                        <i class="fa fa-envelope"></i> example@example.com
+                                        <a href="mailto:raction.tyre@gmail.com"><i class="fa fa-envelope"></i> raction.tyre@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -25,10 +25,6 @@
                             <div class="widget-body">
                                 <ul class="office">
                                     <li>Jakarta</li>
-                                    <li>Bandung</li>
-                                    <li>Kalimantan</li>
-                                    <li>Semarang</li>
-                                    <li>Surabaya</li>
                                 </ul>
                             </div>
                         </div>
@@ -61,14 +57,12 @@
                         </div>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <img src="/uploads/logo.png" width="50%">
+                        <img :src="imgSource" width="50%">
                     </div>
                     <div class="col-lg-4">
                         Social Media 
                         <ul class="social-media">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://facebook.com/ractionsealant"><i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +73,12 @@
 
 <script>
     export default {
-        name: "Footer"
+        name: "Footer",
+        data: function() {
+            return {
+                imgSource: process.env.VUE_APP_PUBLIC_PATH + "/uploads/logo.png"
+            }
+        }
     }
 </script>
 

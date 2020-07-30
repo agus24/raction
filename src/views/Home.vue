@@ -45,31 +45,13 @@
                         <h2 class="h3 mb-sm-20">Best Product</h2>
                         <p>All best Seller product are now available for you and you can buy this product from here any time where to stop now</p>
                     </div>
-                    <div class="card col-lg-4">
+                    <div class="card col-lg-4 offset-4">
                         <img class="card-img-top" src="/uploads/products/tyreseal.png" alt="Card image cap">
                         <div class="card-title">
-                            <h4>Product A</h4>
+                            <h4>Raction Tyre Sealant</h4>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <img class="card-img-top" src="/uploads/products/tyreseal.png" alt="Card image cap">
-                        <div class="card-title">
-                            <h4>Product B</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <img class="card-img-top" src="/uploads/products/tyreseal.png" alt="Card image cap">
-                        <div class="card-title">
-                            <h4>Product C</h4>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
                         </div>
                     </div>
                 </div>
@@ -123,7 +105,7 @@ export default {
             this.products = response.data;
         })
         .catch(error => {
-            console.log("error", error);
+            alert("something went wrong");
         })
       }
   },

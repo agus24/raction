@@ -48,7 +48,7 @@ export default new Router({
     }
     ],
     mode: 'history',
-    scrollBehavior(to, from, savedPosition) {
+    scrollBehavior(to) {
         if (to.hash) {
             const element = document.getElementById(to.hash.slice(1));
             if (element) {

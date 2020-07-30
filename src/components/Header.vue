@@ -65,7 +65,7 @@
         },
         mounted() {
             this.showMenu = false;
-            let scrollInterval = setInterval(() => {
+            setInterval(() => {
                 if (window.scrollY == document.body.scrollTop) {
                     this.headerPutihActive = false;
                 } else {

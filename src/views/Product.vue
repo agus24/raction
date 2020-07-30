@@ -9,13 +9,8 @@
                                 <h4 class="sidebar-title">Product categories</h4>
                                 <div class="sidebar-body">
                                     <ul class="sidebar-list">
-                                        <li><a href="#">All Product</a></li>
-                                        <li><a href="#">Best Seller</a></li>
-                                        <li><a href="#">Car</a></li>
-                                        <li><a href="#">Parts</a></li>
-                                        <li><a href="#">Shop</a></li>
-                                        <li><a href="#">Tayer</a></li>
-                                        <li><a href="#">Uncategorized</a></li>
+                                        <li><a href="#" @click="changeProduct('all')">All Product</a></li>
+                                        <li><a href="#" @click="changeProduct('best')">Best Seller</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -36,8 +31,6 @@
                                 <ProductItem  v-for="(product,index) in products" :data="product" :key="index" />
                             </div>
                         </div>
-
-                        <Pagination />
                     </div>
                 </div>
             </div>
@@ -61,7 +54,11 @@
             return {
                 products : [],
                 database : {},
-                fstorage : {}
+                fstorage : {},
+                productCategory : {
+                    all: 0,
+                    best: 1
+                }
             }
         },
         mounted() {
@@ -70,8 +67,13 @@
                 this.products = response.data;
             })
             .catch(error => {
-                console.log("error", error);
+                alert("Something went wrong.")
             })
+        },
+        methods: {
+            changeProduct(product) {
+                this.productCategory[product]
+            }
         }
     }
 </script>
